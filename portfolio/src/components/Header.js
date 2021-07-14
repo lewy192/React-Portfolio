@@ -1,30 +1,32 @@
 import React from "react";
 import "./About.css";
 
+import { Link } from "react";
+
 function Header() {
     return (
         <div className="nav-bar">
             <h2 className="brand">Lernantino</h2>
             <ul className="nav-list">
                 <li className="nav-item">
-                    <a href="/about" className="nav-link">
+                    <Link href="/about" className="nav-link">
                         about
-                    </a>
+                    </Link>
                 </li>
                 <li className="nav-item">
-                    <a href="/portfolio" className="nav-link">
+                    <Link href="/portfolio" className="nav-link">
                         portfolio
-                    </a>
+                    </Link>
                 </li>
                 <li className="nav-item">
-                    <a href="/contact" className="nav-link">
+                    <Link href="/contact" className="nav-link">
                         contact
-                    </a>
+                    </Link>
                 </li>
                 <li className="nav-item">
-                    <a href="/resume" className="nav-link">
+                    <Link href="/resume" className="nav-link">
                         resume
-                    </a>
+                    </Link>
                 </li>
             </ul>
         </div>
