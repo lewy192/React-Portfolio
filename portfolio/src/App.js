@@ -1,25 +1,33 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 
-import About from "./components/About";
-import Portfolio from "./components/Portfolio";
+import About from "./components/About/About";
+import Portfolio from "./components/Portfolio/Portfolio";
 
-import Contact from "./components/Contact";
+import Contact from "./components/Contact/Contact";
+
+import Main from "./components/Pages/Main";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
     return (
         <div className="App">
-            <Contact />
-            <Header />
-            {/* <Switch>
-                <Route path="/about" component={About} />
-                <Route path="/portfolio" component={Portfolio} />
-                <Route path="/about" component={About} />
-            </Switch> */}
+            <Router>
+                <Header />
+                <Switch>
+                    <Route exact path="/">
+                        <Main />
+                    </Route>
+                    <Route path="/about">
+                        <About />
+                    </Route>
+                    <Route path="/portfolio" component={Portfolio} />
+                    <Route path="/contact" component={Contact} />
+                </Switch>
+            </Router>
         </div>
     );
 }

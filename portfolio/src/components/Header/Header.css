@@ -1,0 +1,39 @@
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: rgb(40, 67, 30, 0.85);
+    color: #f88400;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+.nav-link,
+.brand-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media screen and (min-width: 768px) {
+    .nav-bar {
+        flex-direction: row;
+    }
+    .brand {
+        font-size: 3rem;
+    }
+    .nav-link {
+        margin: 0 3rem;
+        font-size: 2rem;
+    }
+
+    .nav-list {
+        justify-content: flex-end;
+    }
+}
