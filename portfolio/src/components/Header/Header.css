@@ -27,13 +27,15 @@
     }
     .brand {
         font-size: 3rem;
+        float: left;
     }
     .nav-link {
-        margin: 0 3rem;
+        margin: 0 1rem;
         font-size: 2rem;
     }
 
     .nav-list {
-        justify-content: flex-end;
+        align-items: center;
+        justify-content: space-evenly;
     }
 }
