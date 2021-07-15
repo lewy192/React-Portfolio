@@ -10,7 +10,6 @@ function Header() {
                 <h2 className="brand">Lernantino</h2>
             </Link>
             <ul className="nav-list">
-                {/* <Router> */}
                 <li className="nav-item">
                     <Link to="/about" className="nav-link">
                         about
@@ -31,7 +30,6 @@ function Header() {
                         resume
                     </Link>
                 </li>
-                {/* </Router> */}
             </ul>
         </div>
     );

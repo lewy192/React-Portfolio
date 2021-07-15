@@ -8,7 +8,7 @@ import Portfolio from "./components/Portfolio/Portfolio";
 
 import Contact from "./components/Contact/Contact";
 
-import Main from "./components/Pages/Main";
+import Main from "./components/Pages/Main/Main";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
