@@ -1,0 +1,12 @@
+.projects-container {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+    .projects-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
