@@ -12,7 +12,11 @@ function Header() {
                 <h2 className="brand">L H</h2>
             </Link>
             <nav className={`nav-bar ${className ? "transformed" : ""}`}>
-                <ul className="nav-list nav-list1">
+                <ul
+                    className={`nav-list nav-list1 ${
+                        className ? "transformed" : ""
+                    }`}
+                >
                     <li
                         className={`list-item list-item1 ${
                             className ? "transform" : ""
