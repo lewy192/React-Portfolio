@@ -23,13 +23,15 @@
     padding: 0;
 }
 .nav-bar {
-    transform: translateX(100vw);
+    transform: translateX(100vw) translateY(50%);
     display: flex;
     flex-direction: column;
-    transition: 1.5s;
+    transition: 2s;
 }
 .nav-bar.transformed {
-    transform: translateX(0);
+    transform: translateX(0) translateY(50%);
+    /* width: 100vw; */
+    backdrop-filter: blur(10px);
 }
 
 .list-item {
@@ -38,8 +40,9 @@
     font-size: 50px;
     font-weight: 700;
     padding: 2rem;
-    /* opacity: 0; */
+    opacity: 0;
     color: black;
+    transform: translateX(100vw);
 }
 
 .nav-link,
@@ -129,8 +132,16 @@
 
     transform: translate(-5%);
 }
+main.transformed {
+    transform: translateX(-100vw);
+}
+
+main {
+    transition: 1.6s;
+}
 
 .list-item1 {
+    opacity: 0;
     -o-transition: 0.8s;
     -ms-transition: 0.8s;
     -moz-transition: 0.8s;
@@ -139,29 +150,32 @@
     transition: 0.8s;
 }
 .list-item2 {
-    -o-transition: 1s;
-    -ms-transition: 1s;
-    -moz-transition: 1s;
-    -webkit-transition: 1s;
-
-    transition: 1s;
-}
-
-.list-item3 {
+    opacity: 0;
     -o-transition: 1.2s;
     -ms-transition: 1.2s;
     -moz-transition: 1.2s;
     -webkit-transition: 1.2s;
+
     transition: 1.2s;
 }
 
-.list-item4 {
-    -o-transition: 1.4s;
-    -ms-transition: 1.4s;
-    -moz-transition: 1.4s;
-    -webkit-transition: 1.4s;
+.list-item3 {
+    opacity: 0;
+    -o-transition: 1.6s;
+    -ms-transition: 1.6s;
+    -moz-transition: 1.6s;
+    -webkit-transition: 1.6s;
+    transition: 1.6s;
+}
 
-    transition: 1.4s;
+.list-item4 {
+    opacity: 0;
+    -o-transition: 2s;
+    -ms-transition: 2s;
+    -moz-transition: 2s;
+    -webkit-transition: 2s;
+
+    transition: 2s;
 }
 
 .list-item1.transform,
@@ -173,17 +187,10 @@
     -moz-transform: translate(0);
     -webkit-transform: translate(0);
     transform: translate(0);
+    opacity: 1;
 }
 .list-item1:active {
     color: red;
-    -o-transform: translate(0);
-    -ms-transform: translate(0);
-    -moz-transform: translate(0);
-    -webkit-transform: translate(0);
-    transform: translate(0);
-}
-
-.nav-bar.transform {
     -o-transform: translate(0);
     -ms-transform: translate(0);
     -moz-transform: translate(0);
