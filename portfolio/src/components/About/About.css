@@ -6,49 +6,61 @@
     display: flex;
     align-items: center;
     text-align: center;
+    color: var(--testing);
+    font-family: "American Typewriter";
     font-weight: 600;
-    background-color: rgb(55, 75, 74, 0.6);
+    font-weight: 600;
     padding: 30% 5px;
     line-height: 1.6;
+    border-radius: 20px;
     /* height: 100%; */
+    background-color: rgb(241, 229, 255, 0.5);
 }
 
 .about-container {
     background-repeat: no-repeat;
     background-size: cover;
-    /* height: 100vh; */
-    border-radius: 10px;
+    background-position: center center;
+    position: relative;
+    border-radius: 20px;
+    transition: 0.6s;
+    z-index: -1;
 }
-
 .about-page {
-    background-color: rgb(40, 67, 30, 0.85);
-    padding: 2rem;
-    color: inherit;
+    margin: 150px 0;
+    /* max-height: 600px; */
+
+    z-index: 0;
 }
 
 @media screen and (min-width: 768px) {
     .about-container {
         background-image: none;
         display: flex;
-        margin: 3rem 3rem;
-        border: 2px var(--coolGrey) solid;
-        background-color: rgb(40, 67, 30, 0.85);
+        margin: 0 0 3rem 0;
     }
     .about-desc {
         font-size: 24px;
         padding: 6rem 3rem;
         font-weight: 300;
         margin: 0;
-        width: 70%;
-        background-color: rgb(55, 75, 74);
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
+    }
+
+    .about-page {
+        border-radius: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .about-desc {
+        width: 50%;
+        border-radius: 20px 0 0 20px;
     }
     .about-image {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
-        width: 30%;
+        width: 50%;
         border-top-right-radius: 8px;
         border-bottom-right-radius: 8px;
     }

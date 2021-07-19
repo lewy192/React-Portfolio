@@ -1,17 +1,33 @@
-import React from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 
 import "./About.css";
 import hotham from "./Hotham.jpg";
 
 function About() {
-    // if (screen.width > 768) {
-    //     const imgBehind = `none`;
-    // }
+    const [screenWidthValue, setScreenWidthValue] = useState();
+
+    function useWindowSize() {
+        const [size, setSize] = useState(0);
+        useLayoutEffect(() => {
+            function updateSize() {
+                setSize(window.innerWidth);
+            }
+            window.addEventListener("resize", updateSize);
+            updateSize();
+            return () => window.removeEventListener("resize", updateSize);
+        }, []);
+        return size;
+    }
+
     return (
         <div className="about-page">
             <div
                 className="about-container"
-                style={{ backgroundImage: `url(${hotham})` }}
+                style={{
+                    backgroundImage: `${
+                        useWindowSize() > 1024 ? `none` : `url(${hotham})`
+                    }`,
+                }}
             >
                 <p className="about-desc">
                     Ever since a young age, building has come natural. It
@@ -29,7 +45,11 @@ function About() {
                 </p>
                 <div
                     className="about-image"
-                    style={{ backgroundImage: `url(${hotham})` }}
+                    style={{
+                        backgroundImage: `${
+                            useWindowSize() > 1024 ? `url(${hotham})` : `none`
+                        }`,
+                    }}
                 ></div>
             </div>
         </div>
