@@ -27,6 +27,8 @@ function Main() {
                     <br />
                     Building has always been my specialty from Lego&reg; to
                     motorbikes and everything in between.
+                    <br />
+                    So lets see what I can build for you.
                 </p>
             </div>
             <Link className="projects-button button" to="/projects">

@@ -3,9 +3,65 @@
     margin: 8px 0;
 }
 
+h3 {
+    margin: 0;
+}
+
 @media screen and (min-width: 768px) {
     .project-card {
         flex: 1 1 40%;
         margin: 8px;
     }
+}
+.photo {
+    width: 300px;
+    height: 300px;
+    background-color: #fb8400;
+    border-radius: 10px;
+}
+.description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 100%;
+    width: 50%;
+}
+.project-header {
+    margin: 0 auto 1rem auto;
+}
+
+.front-box {
+    flex-shrink: 0;
+    position: relative;
+    backdrop-filter: blur(2px);
+    height: 120px;
+    margin: auto 0;
+    box-sizing: border-box;
+    background-color: transparent;
+    /* background-color: black; */
+    transform: translateX(-20px);
+    border: 1px solid black;
+    border-radius: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.front-box,
+.back-box {
+    flex-shrink: 0;
+    height: 120px;
+    border: 1px solid black;
+    border-radius: 10px;
+    /* top: 50%; */
+}
+.back-box {
+    transform: translate(-10px, -130px);
+    /* border: 1px solid #fb8400; */
+    height: 120px;
+}
+.project {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    margin: 2rem 0;
 }
