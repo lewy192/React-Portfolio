@@ -2,6 +2,7 @@
     --testing: #b20194;
     --introBlue: rgb(18, 77, 165);
     --siteBackground: #c7ceeb;
+    --siteBackgroundValues: 199, 206, 235;
 }
 
 body {

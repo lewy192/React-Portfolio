@@ -34,7 +34,7 @@ function About() {
                     started with lego which quickly progressed to meccano and
                     eventually computers. <br />
                     <br />
-                    January 2020 a new door opened for me, reintroduction to
+                    January 2020 a new door opened for me, A reintroduction to
                     programming, I started learning python and MySQL. Quick came
                     a realisation... That anything could now be built.
                     <br />
