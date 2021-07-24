@@ -2,6 +2,7 @@ import react from "react";
 import "./Project.css";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+// import Background from "TECHREADY.png ";
 
 // const trial = `  <div className="project-card">
 // <div
@@ -19,29 +20,27 @@ function Project({ project }) {
         // triggerOnce: true,
         threshold: 0.5,
     });
+    const { name, imgUrl, description, technologies } = project;
 
     return (
         <div className="project" ref={ref}>
-            <div className="photo"></div>
+            <img
+                className="photo"
+                src={`/img/${imgUrl}`}
+                alt={`photo of ${name} project home page`}
+            />
             <div className="description-container">
-                <h3 className="project-header">TechREADY</h3>
+                <h3 className="project-header">{name}</h3>
                 <motion.div className={`front-box ${inView ? "animate" : ""}`}>
-                    <p className="project-description">
-                        this project is awesome, check it out
-                    </p>
+                    <p className="project-description">{description}</p>
                 </motion.div>
-                {/* <motion.div className={`back-box ${inView ? "animate" : ""}`}>
-                    <p className="project-description">
-                        this porject was awesome because...
-                    </p>
-                </motion.div> */}
                 <ul className="tech-list">
-                    <li>Node</li>
-                    <li>JWT</li>
-                    <li>REST API</li>
-                    <li>Full - Stack</li>
+                    {technologies.map((element) => (
+                        <li key={element}>{element}</li>
+                    ))}
                 </ul>
             </div>
+            <div className="links-container"></div>
         </div>
     );
 }
