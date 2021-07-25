@@ -20,7 +20,8 @@ function Project({ project }) {
         // triggerOnce: true,
         threshold: 0.5,
     });
-    const { name, imgUrl, description, technologies } = project;
+    const { name, imgUrl, description, technologies, repoLink, deployedLink } =
+        project;
 
     return (
         <div className="project" ref={ref}>
@@ -39,8 +40,23 @@ function Project({ project }) {
                         <li key={element}>{element}</li>
                     ))}
                 </ul>
+                <div className="links-container">
+                    <a href={repoLink} className="repo-link">
+                        <img
+                            src={`/img/icons/github-sign.svg`}
+                            alt=""
+                            className="repo-img"
+                        />
+                    </a>
+                    <a href={deployedLink} className="live-link">
+                        <img
+                            src={`/img/icons/external.svg`}
+                            alt=""
+                            className="live-img"
+                        />
+                    </a>
+                </div>
             </div>
-            <div className="links-container"></div>
         </div>
     );
 }
