@@ -1,5 +1,5 @@
 .project-card {
-    border: 2px solid #fb8400;
+    border: 2px solid;
     margin: 8px 0;
 }
 
@@ -8,7 +8,6 @@ h3 {
 }
 
 .photo {
-    background-color: orange;
     width: 250px;
     height: 250px;
     margin: 0 auto;
@@ -168,13 +167,13 @@ h3 {
     .front-box.animate {
         transform: translateX(-60px);
         backdrop-filter: blur(0);
-        background-color: #cfce8c;
+        background-color: #dddd7ac0;
     }
 
     .front-box:hover {
         transition: 500ms;
-        box-shadow: 4px 6px 20px var(--introBlue);
-        transform: scale(1.05) translateX(-70px);
+        box-shadow: 4px 6px 20px #47699c;
+        transform: translate(-60px, -5px);
     }
 
     .project {
@@ -198,7 +197,8 @@ h3 {
         width: 50%;
         border: 2px solid var(--testing);
     }
+
     .front-box:hover {
-        transform: scale(0.95) translateX(10px);
+        transform: translateX(10px);
     }
 }

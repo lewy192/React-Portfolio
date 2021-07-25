@@ -1,8 +1,16 @@
 import react from "react";
 import Project from "../Project/Project";
+import MiniProject from "../MiniProject/MiniProject";
 
 import "./Portfolio.css";
 const projects = [
+    // reserved for Project 3
+    // {
+    //     name: "Number 3",
+    //     imgUrl: "",
+    //     description: "hello this is number 3 desc",
+    //     technologies: ["JWT", "Node", "REST Api", "Full Stack"],
+    // },
     {
         name: "TechREADY",
         imgUrl: "TECHREADY.png",
@@ -15,28 +23,82 @@ const projects = [
         to be involved in the wonderful Development
         Community both to give and receive`,
         technologies: ["JWT", "Node", "REST Api", "Full Stack"],
+        repoLink: "#",
+        deployedLink: "#",
     },
     {
-        name: "Number 2",
-        imgUrl: "",
-        description: "hello this is number 2 desc",
-        technologies: ["JWT", "Node", "REST Api", "Full Stack"],
+        name: "FlowerPot",
+        imgUrl: "FLOWERPOT.png",
+        description: `FlowerPot provides a user friendly entry
+        into the realm of gardening or a great place
+        to expand your knowledge. The site includes
+        a widget displaying the current weather and
+        rainfall over the past 24hours, Team
+        favourites and a garden page to track what
+        you've planted and when`,
+        technologies: ["Dynamic Weather", "Front-End", "Responsive"],
+        repoLink: "#",
+        deployedLink: "#",
+    },
+];
+
+const miniProjects = [
+    {
+        name: "Day Planner",
+        description: ` When used with the note taker you have no
+        excuse to be unorganised. The day planner,
+        helps you plan your days down to the
+        hour,Helping you keep your days planned out
+        to fit in more programming.`,
+        technologies: ["Localstorage", "Bootstrap", "jQuery"],
+        deployedLink: "https://lewy192.github.io/Day-Planner/",
     },
     {
-        name: "Number 3",
-        imgUrl: "",
-        description: "hello this is number 3 desc",
-        technologies: ["JWT", "Node", "REST Api", "Full Stack"],
+        name: "Weather Planner",
+        description: `Going somewhere and need to check the
+        weather? This project is for you. enter a
+        location, todays weather will be presented
+        and the coming 5 days Perfect for planning a
+        get away or checking the weather near you.
+        Utilises the openweather API and
+        Geoencoding.`,
+        technologies: ["fetch", "Responsive", "Localstorage"],
+        deployedLink: "https://lewy192.github.io/weather-planner/",
+    },
+    {
+        name: "README Generator",
+        description: `AHhhhh READme's... The one thing we all use
+        but so dislike to write. You get to the end
+        of your project, all excited to publish and
+        then... you remember... YOU'VE LEFT THE
+        README. Well to significantly reduce the
+        time it takes to produce a professional
+        README I built this awesome project. It's A
+        CLI prompt based app, so head to the repo,
+        download the code, answer the prompts and
+        save yourself sometime. Thank me later.`,
+        technologies: ["CLI Prompts", "Automation", "Node Js"],
+        deployedLink: "#",
     },
 ];
 
 function Portfolio() {
     return (
-        <div className="projects-container">
-            {projects.map((project) => (
-                <Project project={project} key={project.name} />
-            ))}
-        </div>
+        <section className="portfolio-section">
+            <div className="projects-container">
+                {projects.map((project) => (
+                    <Project project={project} key={project.name} />
+                ))}
+            </div>
+            <div className="mini-projects-container">
+                {miniProjects.map((miniProject) => (
+                    <MiniProject
+                        miniProject={miniProject}
+                        key={miniProject.name}
+                    />
+                ))}
+            </div>
+        </section>
     );
 }
 export default Portfolio;

@@ -32,7 +32,7 @@ function Main() {
                         motorbikes and everything in between.
                     </p>
                 </div>
-                <Link className="projects-button button" to="/projects">
+                <Link className="projects-button button" to="/portfolio">
                     See My Stuff
                 </Link>
                 <a
