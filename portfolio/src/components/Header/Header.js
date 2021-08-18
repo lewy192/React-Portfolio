@@ -41,22 +41,25 @@ function Header() {
                         </Link>
                     </li>
                     <li className={`list-item list-item3 ${transformClass()}`}>
-                        <Link
-                            to="/contact"
+                        <a
+                            href="mailto:lewis.james.hill@outlook.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="nav-link"
                             onClick={transformClassDecider}
                         >
                             contact
-                        </Link>
+                        </a>
                     </li>
                     <li className={`list-item list-item4 ${transformClass()}`}>
-                        <Link
-                            to="/resume"
+                        <a
+                            href={"./Lewis-Hill-Resume.pdf"}
                             className="nav-link"
                             onClick={transformClassDecider}
+                            download
                         >
                             resume
-                        </Link>
+                        </a>
                     </li>
                 </ul>
             </nav>

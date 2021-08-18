@@ -289,6 +289,34 @@
     .side-navbar {
         padding: 0 30px;
     }
+    li > a {
+        text-decoration: none;
+    }
+
+    .nav-link {
+        position: relative;
+        margin: 3px;
+    }
+    .nav-link {
+        text-decoration: none;
+        position: relative;
+        margin: 3px;
+    }
+    .nav-link:hover:after,
+    .nav-link:focus:after,
+    .nav-link:active:after {
+        width: 100%;
+    }
+    .nav-link:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        height: 4px;
+        background-color: var(--testing);
+        width: 0;
+        transition: width 0.25s;
+    }
 }
 @media screen and (min-width: 768px) {
     /* .nav.side-navbar {
@@ -360,9 +388,9 @@
         padding: 8px;
         margin: 0 1rem;
     }
-    .nav-link:hover {
+    /* .nav-link:hover {
         border: 3px solid;
         border-radius: 10px;
         transform: scaleX(0.99346);
-    }
+    } */
 }
