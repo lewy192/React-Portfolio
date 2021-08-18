@@ -4,13 +4,13 @@ import MiniProject from "../MiniProject/MiniProject";
 
 import "./Portfolio.css";
 const projects = [
-    // reserved for Project 3
-    // {
-    //     name: "Number 3",
-    //     imgUrl: "",
-    //     description: "hello this is number 3 desc",
-    //     technologies: ["JWT", "Node", "REST Api", "Full Stack"],
-    // },
+    {
+        name: "TimeBank",
+        imgUrl: "TimeBank.png",
+        description: `TimeBank is your accountability buddy. If you’re ever trailing behind in the tasks you have set yourself today, TimeBank will show you by how much. It is the place to go and seamlessly track your google tasks, how many you have set for the day, how many you have completed for the day and a handy graph to see your overall progress.`,
+        technologies: ["MERN", "GraphQL", "Google OAuth2.0"],
+        deployedLink: "https://time-bank-1.herokuapp.com/",
+    },
     {
         name: "TechREADY",
         imgUrl: "TECHREADY.png",
@@ -23,9 +23,10 @@ const projects = [
         to be involved in the wonderful Development
         Community both to give and receive`,
         technologies: ["JWT", "Node", "REST Api", "Full Stack"],
-        repoLink: "#",
-        deployedLink: "#",
+        repoLink: "https://github.com/vvnnzar/Project-2-TechREADY",
+        deployedLink: "https://gentle-headland-96957.herokuapp.com/",
     },
+
     {
         name: "FlowerPot",
         imgUrl: "FLOWERPOT.png",
@@ -38,7 +39,7 @@ const projects = [
         you've planted and when`,
         technologies: ["Dynamic Weather", "Front-End", "Responsive"],
         repoLink: "#",
-        deployedLink: "#",
+        deployedLink: "https://flowerpotpeople.github.io/FlowerPot/",
     },
 ];
 
