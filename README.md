@@ -20,7 +20,7 @@ From this project I learnt design is tough.
 
 ## Screenshot
 
-![a photo of the whole page](./assets/Img/Portfolio.png)
+![a photo of the whole page](./fathomless-reaches-90875.herokuapp.com_.png)
 
 ## Contents
 
